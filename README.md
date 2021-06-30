@@ -9,7 +9,26 @@ sys.path.append("/home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2")
 ```
 test:
 ```
-# install libgtk2.0-dev and pkg-config
+# opencv must be compiled with GTK, so install libgtk2.0-dev and pkg-config and re-build opencv:
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	-D CMAKE_INSTALL_PREFIX=/usr/local \
+	-D INSTALL_PYTHON_EXAMPLES=ON \
+	-D INSTALL_C_EXAMPLES=OFF \
+	-D OPENCV_ENABLE_NONFREE=ON \
+	-D WITH_CUDA=ON \
+	-D WITH_CUDNN=ON \
+	-D OPENCV_DNN_CUDA=ON \
+	-D ENABLE_FAST_MATH=1 \
+	-D CUDA_FAST_MATH=1 \
+	-D CUDA_ARCH_BIN=7.5 \
+	-D WITH_CUBLAS=1 \
+	-D OPENCV_EXTRA_MODULES_PATH=~/pzs/opencv_contrib/modules \
+    -D WITH_GTK=ON \
+	-D BUILD_EXAMPLES=ON ..
+```
+run demo:
+```
 python3 demo.py tracking --load_model ./coco_tracking.pth --demo ../videos/nuscenes_mini.mp4 
 
 ```
