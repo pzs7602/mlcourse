@@ -24,7 +24,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CUDA_ARCH_BIN=7.5 \
 	-D WITH_CUBLAS=1 \
 	-D OPENCV_EXTRA_MODULES_PATH=~/pzs/opencv_contrib/modules \
-    -D WITH_GTK=ON \
+	-D WITH_GTK=ON \
 	-D BUILD_EXAMPLES=ON ..
 ```
 run demo:
