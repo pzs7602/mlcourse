@@ -9,6 +9,7 @@ sys.path.append("/home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2")
 ```
 test:
 ```
+# install libgtk2.0-dev and pkg-config
 python3 demo.py tracking --load_model ./coco_tracking.pth --demo ../videos/nuscenes_mini.mp4 
 
 ```
@@ -16,7 +17,7 @@ python3 demo.py tracking --load_model ./coco_tracking.pth --demo ../videos/nusce
 
 create a project a github.com
 the files larger then 100M cannt be pushed to remote repository
-
+```
 echo "# tensorrt_demos" >> README.md
 git init
 git add README.md
@@ -24,13 +25,15 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:pzs7602/tensorrt_demos.git
 git push -u origin main
-
+```
 the last command will prompt you for the username/password in github.com
 
 or if files modified, commit:
+```
 use git add/rm <file> to add or remove modified files from local repository to be commited
 git commit -m "files renew commit"
 git push -u origin main
+```
 
 if comamnd: 
 ```
