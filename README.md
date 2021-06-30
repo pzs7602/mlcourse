@@ -2,7 +2,7 @@
 
 ### object tracking
 https://github.com/xingyizhou/CenterTrack/
-install DCNv2 and insert python package search path in all(2files) .py files:
+install DCNv2 and insert python package search path in all(2files, search for "from .DCNv2.dcn_v2 import DCN") .py files:
 ```
 import sys
 sys.path.append("/home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2")
@@ -27,10 +27,14 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_GTK=ON \
 	-D BUILD_EXAMPLES=ON ..
 ```
-run demo:
+run demo with mp4 video file:
 ```
 python3 demo.py tracking --load_model ./coco_tracking.pth --demo ../videos/nuscenes_mini.mp4 
 
+```
+run demo with camera:
+```
+python3 demo.py tracking --load_model ./coco_tracking.pth --demo webcam
 ```
 # push local directory to github
 
