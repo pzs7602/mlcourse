@@ -10,7 +10,7 @@ sys.path.append("/home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2")
 test:
 ```
 # opencv must be compiled with GTK, so install libgtk2.0-dev and pkg-config and re-build opencv:
-```
+
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
