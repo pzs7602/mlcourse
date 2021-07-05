@@ -2,7 +2,15 @@
 
 ### object tracking
 https://github.com/xingyizhou/CenterTrack/
-install DCNv2 and insert python package search path in all(2files, search for "from .DCNv2.dcn_v2 import DCN") .py files:
+install DCNv2
+
+```
+# from CenterTrack/src/lib/model/networks/DCNv2 directory
+python3 setup.py build develop --install-dir ~/.local/lib/python3.8/dist-packages/
+```
+Installed /home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2
+
+insert python package search path in all(2files, search for "from .DCNv2.dcn_v2 import DCN") .py files:
 ```
 import sys
 sys.path.append("/home/pzs/pzs/CenterTrack/src/lib/model/networks/DCNv2")
@@ -82,3 +90,6 @@ cat ~/.ssh/id_rsa.pub
 import cv2
 print(cv2.getBuildInformation())
 ```
+
+# build DCNv2 in jetson nx
+https://github.com/jinfagang/DCNv2_latest/
